@@ -16,7 +16,7 @@ public class PackageStateTest {
     @Test
     public void testDeliveredState() {
         Package context = new Package(10);
-        context.setState(new DeliveredState(context));
+        context.setState(new DeliveredState());
         assertEquals("The package has been delivered.", context.getState().toString());
     }
 }

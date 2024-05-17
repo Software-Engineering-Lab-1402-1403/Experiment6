@@ -1,20 +1,16 @@
 package org.example.shipping.state;
-import org.example.shipping.Package;
 
-public class InTransitState extends PackageState {
-    private Package pkg;
-
-    public InTransitState(Package pkg) {
-        this.pkg = pkg;
-    }
-
+public class InTransitState implements PackageState {
     @Override
     public String toString() {
         return "The package is in transit.";
     }
 
     @Override
-    public void updateState() {
-        pkg.setState(new DeliveredState(pkg));
+    public PackageState updateState(int isChanged) {
+        if (isChanged == 1) {
+            return new DeliveredState();
+        }
+        return this;
     }
 }

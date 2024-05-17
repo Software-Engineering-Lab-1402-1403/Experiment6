@@ -10,13 +10,13 @@ public class ShippingStrategyTest {
     @Test
     public void testStandard() {
         Package myPackage = new Package(10);
-        assertEquals("The package is in transit.", myPackage.getState().toString());
+        assertEquals(25, (int)Math.floor(myPackage.calculateShippingPrice()));
     }
 
     @Test
     public void testExpress() {
-        Package context = new Package(10);
-        context.setState(new DeliveredState(context));
-        assertEquals("The package has been delivered.", context.getState().toString());
+        Package myPackage = new Package(10);
+        myPackage.setStrategy(new ExpressStrategy());
+        assertEquals(35, (int)Math.floor(myPackage.calculateShippingPrice()));
     }
 }

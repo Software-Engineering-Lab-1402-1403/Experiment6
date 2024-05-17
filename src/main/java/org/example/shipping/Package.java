@@ -13,7 +13,7 @@ public class Package {
 
     public Package(double weight) {
         this.weight = weight;
-        this.state = new InTransitState(this);
+        this.state = new InTransitState();
         this.strategy = new StandardStrategy();
     }
 
@@ -33,12 +33,12 @@ public class Package {
         return strategy;
     }
 
-    public void updateState() {
-        state.updateState();
+    public void updateState(int isChanged) {
+        this.state = state.updateState(isChanged);
     }
 
     public void printStatus() {
-        System.out.println(state.toString());
+        System.out.println("\n" + state.toString() + "\n");
     }
 
     public double calculateShippingPrice() {

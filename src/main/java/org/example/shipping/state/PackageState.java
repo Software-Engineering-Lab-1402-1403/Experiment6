@@ -1,10 +1,9 @@
 package org.example.shipping.state;
 
-public class PackageState {
-    public void updateState() {
+public interface PackageState {
+    public default PackageState updateState(int isChanged) {
+        return null;
     }
 
-    public String toString() {
-        return "";
-    }
+    public String toString();
 }

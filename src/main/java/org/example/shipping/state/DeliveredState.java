@@ -1,13 +1,6 @@
 package org.example.shipping.state;
 
-import org.example.shipping.Package;
-
-public class DeliveredState extends PackageState {
-    private Package pkg;
-
-    public DeliveredState(Package pkg) {
-        this.pkg = pkg;
-    }
+public class DeliveredState implements PackageState {
 
     @Override
     public String toString() {
@@ -15,7 +8,7 @@ public class DeliveredState extends PackageState {
     }
 
     @Override
-    public void updateState() {
-        // No further state transition
+    public PackageState updateState(int isChanged) {
+        return this;
     }
 }
