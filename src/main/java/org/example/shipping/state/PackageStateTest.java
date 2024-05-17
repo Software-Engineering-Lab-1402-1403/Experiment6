@@ -1,8 +1,10 @@
-package shipping.state;
+package org.example.shipping.state;
 
 import static org.junit.Assert.assertEquals;
+
+import org.example.shipping.Package;
+import org.example.shipping.state.DeliveredState;
 import org.junit.Test;
-import shipping.Package;
 
 public class PackageStateTest {
 

@@ -1,4 +1,4 @@
-package shipping.state;
+package org.example.shipping.state;
 
 public class PackageState {
     public void updateState() {
