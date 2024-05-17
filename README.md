@@ -1,5 +1,11 @@
 # Experiment6
 
+Ramtin Mirza Mohammad Khoshnevis: 99105764 (PO)
+
+Sarina Zahedi: 98170838 (Developer)
+
+Arshia Dadras: 99109109 (Developer)
+
 در این آزمایش ما در دو مرحله کلاس Package را تکمیل کردیم
 
 ## State Pattern
