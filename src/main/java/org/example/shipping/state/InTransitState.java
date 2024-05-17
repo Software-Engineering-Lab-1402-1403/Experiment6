@@ -2,7 +2,7 @@ package org.example.shipping.state;
 import org.example.shipping.Package;
 
 public class InTransitState extends PackageState {
-    private org.example.shipping.Package pkg;
+    private Package pkg;
 
     public InTransitState(Package pkg) {
         this.pkg = pkg;

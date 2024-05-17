@@ -1,5 +1,6 @@
 package org.example.shipping;
 
+import org.example.shipping.state.DeliveredState;
 import org.example.shipping.state.InTransitState;
 import org.example.shipping.state.PackageState;
 
@@ -20,9 +21,9 @@ public class Package {
         return state;
     }
 
-    //    public void updateState() {
-//        state.updateState(this);
-//    }
+        public void updateState() {
+        state.updateState();
+    }
 
     public void printStatus() {
         System.out.println(state.toString());
